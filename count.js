@@ -1,3 +1,4 @@
+
 let video, model, countElement, count = 0;
 
 async function loadModel() {
@@ -8,6 +9,26 @@ function detectPeople() {
     model.detect(video).then(predictions => {
         count = predictions.filter(prediction => prediction.class === 'person').length;
         countElement.textContent = count;
+
+        if (count <=1) {
+            messageElement.textContent = 'Smooth Traffic😀';
+            green.style.backgroundColor="green";
+            orange.style.backgroundColor="black";
+           
+            
+        } 
+        else if(count>=2){
+            messageElement.textContent = 'Get ready😀';
+            orange.style.backgroundColor="yellow";
+           
+           
+        }
+
+        else  if(count>=3) {
+            messageElement.textContent = 'Cross in threes😀';
+            red.style.backgroundColor="red";
+        }
+
 
         requestAnimationFrame(detectPeople);
     });
@@ -27,6 +48,10 @@ async function setupCamera() {
 
 async function start() {
     countElement = document.getElementById('count');
+    messageElement = document.getElementById('message');
+    
+
+    
 
     await setupCamera();
     await loadModel();
@@ -34,3 +59,6 @@ async function start() {
 }
 
 start();
+
+
+
