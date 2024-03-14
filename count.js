@@ -10,23 +10,28 @@ function detectPeople() {
         count = predictions.filter(prediction => prediction.class === 'person').length;
         countElement.textContent = count;
 
-        if (count <=1) {
+        if (count <=0) {
             messageElement.textContent = 'Smooth Traffic😀';
             green.style.backgroundColor="green";
             orange.style.backgroundColor="black";
+            red.style.backgroundColor="black";
            
             
         } 
-        else if(count>=2){
-            messageElement.textContent = 'Get ready😀';
-            orange.style.backgroundColor="yellow";
+        else if(count>=2 ){
+            messageElement.textContent = 'Stop😀';
+            orange.style.backgroundColor="black";
+            green.style.backgroundColor="black";
+            red.style.backgroundColor="red";
            
            
         }
 
-        else  if(count>=3) {
-            messageElement.textContent = 'Cross in threes😀';
-            red.style.backgroundColor="red";
+        else  if(count>=1 ) {
+            messageElement.textContent = 'get ready😀';
+            red.style.backgroundColor="black";
+            orange.style.backgroundColor="yellow";
+            green.style.backgroundColor="black";
         }
 
 

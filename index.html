@@ -26,6 +26,7 @@
 
         #video{
             background-color:gray;
+            bordercolor:solid green;
         }
         #lights-container{
             background-color:black;
@@ -45,7 +46,7 @@
             margin-bottom:0.5cm;
         }
         #message{
-            background-color:red;
+            background-color:gray;
             position: absolute;
             top: 20cm;
             left: 10cm;
@@ -54,9 +55,14 @@
             font-size: 20px;
             text-color:green;
         }
-        #red{
+        .simulate{
             background-color:red;
+            width:45cm;
         }
+        .simulate .h1{
+            text'-align:center;
+        }
+        
        
        
     </style>
@@ -70,11 +76,17 @@
 
 
         <div id="message"></div>
+        <div class="simulate">
+<h1>This is where trafiic simulation goes</h1>
+</div>
+
+        </div>
 
         <div id="lights-container">
+        <div id="green"  class="light" ></div>
+        <div id="orange"  class="light" ></div>
         <div id="red"  class="light"></div>
-         <div id="green"  class="light" ></div>
-         <div id="orange"  class="light" ></div>
+         
          </div>
 
            
@@ -91,6 +103,9 @@
     
  
 <script src="count.js"></script>
+
+
+
 
      
     
