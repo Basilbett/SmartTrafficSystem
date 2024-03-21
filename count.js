@@ -18,7 +18,7 @@ function detectPeople() {
            
             
         } 
-        else if(count>=2 ){
+        else if(count>=4 ){
             messageElement.textContent = 'Stop😀';
             orange.style.backgroundColor="black";
             green.style.backgroundColor="black";
@@ -51,9 +51,11 @@ async function setupCamera() {
     });
 }
 
+
 async function start() {
     countElement = document.getElementById('count');
     messageElement = document.getElementById('message');
+    roadstop = document.getElementById('road');
     
 
     
@@ -64,6 +66,16 @@ async function start() {
 }
 
 start();
+
+function stoproad(){
+
+    if(count=1){
+        road.animation=stop();
+
+    }
+
+
+}
 
 
 

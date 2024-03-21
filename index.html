@@ -11,7 +11,6 @@
         #video-container {
             position: absolute;
         }
-
         #counter {
            
             top: 50px;
@@ -25,16 +24,17 @@
         
 
         #video{
-            background-color:gray;
-            bordercolor:solid green;
+          
+            
         }
         #lights-container{
             background-color:black;
             padding:10px;
-            margin-left:30cm;
+            margin-left:20cm;
             width:2cm;
             height:7cm;
             border-radius:2cm;
+
 
             
         }
@@ -48,39 +48,56 @@
         #message{
             background-color:gray;
             position: absolute;
-            top: 20cm;
-            left: 10cm;
+            top: 5cm;
+            left: 30cm;
             padding: 20px 80px;
             border-radius: 5px;
             font-size: 20px;
             text-color:green;
         }
-        .simulate{
-            background-color:red;
-            width:45cm;
+        #simulate{
+            position:absolute;
+                   
+            float:right;
+           
+            display:flex;
+            margin-left:20cm;
+            
+
+            
+
+
         }
-        .simulate .h1{
-            text'-align:center;
+        h1{
+            margin-left:20cm;
         }
+    
         
-       
-       
+        
     </style>
 </head>
 <body>
-
+<div id="message"></div>
 
     <div id="video-container"> 
         <video id="video"  width="640" height="480" autoplay></video><br><br>
         <div id="counter">People Count: <span id="count">0</span></div>
 
+       
 
-        <div id="message"></div>
-        <div class="simulate">
-<h1>This is where trafiic simulation goes</h1>
+
+        
+       
+</video>
+
 </div>
 
-        </div>
+       
+
+
+
+
+</div>
 
         <div id="lights-container">
         <div id="green"  class="light" ></div>
@@ -89,29 +106,22 @@
          
          </div>
 
-           
-   
-  
-   
-   
+        
     </div>
         
         
  </div>
-       
-       
-    
- 
+   
 <script src="count.js"></script>
 
 
 
 
-     
-    
+		
+		
 
-     
 
+</div>
 
 </body>
 </html>
